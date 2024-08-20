@@ -3,13 +3,13 @@ import EventsBST from "./EventsBST";
 
 const event1 = new Events(
   new Date("2024-08-13T13:00:00"),
-  "Attend IG Call",
+  "Attend Client Call",
   "Mandatory"
 );
 const event2 = new Events(
   new Date("2024-08-15T17:00:00"),
-  "Attend Sprint grooming",
-  "To be declared"
+  "Prepare system architecture diagram",
+  "Details to be declared"
 );
 const event3 = new Events(
   new Date("2024-08-11T11:00:00"),
@@ -22,6 +22,7 @@ const event4 = new Events(
   "Required"
 );
 
+// This data can be fetched from the DB
 const treeNodes = [
   { date: new Date("2024-08-13"), events: [event1] },
   {
@@ -34,11 +35,12 @@ const treeNodes = [
   },
 ];
 
+// Once created, this tree can be stored in an in-memory DB like Redis. If data changes in DB, invalidate the cache and re-build the tree
 const tree = new EventsBST(treeNodes);
 console.log(tree.findEventsOnDate(new Date("2024-08-11")));
 
 tree.deleteEvent({
-  eventId: 1723372200000,
+  eventId: 1723372200000, // event4
   eventTime: new Date("2024-08-11"),
 });
 

@@ -1,5 +1,5 @@
 type EventDetails = {
-  eventId: number;
+  eventId: number; // The timestamp of the event, could be some other unique id as well
   eventTime: Date;
 };
 
