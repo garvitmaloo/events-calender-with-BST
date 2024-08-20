@@ -1,3 +1,5 @@
+![Project Image](./assets/Image.png)
+
 # About this repository?
 
 This repository contains a very simple application of Binary Search Tree. I have used a BST to
@@ -55,6 +57,7 @@ I have intentionally skipped the UI for this because the sole purpose was to pra
 ## 4. Chronological order
 
 **Time complexity** - O(n); n = number of nodes in the tree
+
 **Space complexity** - O(n); n = number of nodes in the tree
 
 ## 5. Deleting a node
